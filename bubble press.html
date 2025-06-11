@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BubblePress Laundry - Professional Laundry Services</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#3B82F6',secondary:'#93C5FD'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-section {
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 40%, rgba(255, 255, 255, 0.7) 60%, rgba(255, 255, 255, 0.4) 80%, rgba(255, 255, 255, 0) 100%), url('https://readdy.ai/api/search-image?query=professional%20laundry%20service%20with%20neatly%20folded%20clean%20clothes%2C%20bright%20and%20airy%20environment%2C%20modern%20laundry%20facility%20with%20washing%20machines%20in%20background%2C%20soft%20natural%20lighting%2C%20clean%20and%20minimalist%20aesthetic%2C%20high-quality%20professional%20photography&width=1920&height=1080&seq=1&orientation=landscape');
+            background-size: cover;
+            background-position: center;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.1);
+        }
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.1);
+        }
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
+        .whatsapp-button {
+            transition: all 0.3s ease;
+        }
+        .whatsapp-button:hover {
+            transform: scale(1.1);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #3B82F6;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <header class="fixed top-0 left-0 w-full bg-white bg-opacity-95 shadow-sm z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="flex items-center space-x-2">
+                <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+                    <div class="text-white text-xl">
+                        <i class="ri-water-flash-line"></i>
+                    </div>
+                </div>
+                <span class="text-2xl font-['Pacifico'] text-primary">BubblePress</span>
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="nav-link text-gray-700 hover:text-primary transition-colors">Home</a>
+                <a href="#services" class="nav-link text-gray-700 hover:text-primary transition-colors">Services</a>
+                <a href="#pricing" class="nav-link text-gray-700 hover:text-primary transition-colors">Pricing</a>
+                <a href="#about" class="nav-link text-gray-700 hover:text-primary transition-colors">About</a>
+                <a href="#contact" class="nav-link text-gray-700 hover:text-primary transition-colors">Contact</a>
+                <a href="#contact" class="bg-primary text-white px-6 py-2 !rounded-button whitespace-nowrap hover:bg-primary/90 transition-colors">Book Now</a>
+            </div>
+            
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+                <i class="ri-menu-line text-2xl"></i>
+            </button>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white px-6 py-4 shadow-md">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="text-gray-700 hover:text-primary transition-colors">Home</a>
+                <a href="#services" class="text-gray-700 hover:text-primary transition-colors">Services</a>
+                <a href="#pricing" class="text-gray-700 hover:text-primary transition-colors">Pricing</a>
+                <a href="#about" class="text-gray-700 hover:text-primary transition-colors">About</a>
+                <a href="#contact" class="text-gray-700 hover:text-primary transition-colors">Contact</a>
+                <a href="#contact" class="bg-primary text-white px-6 py-2 !rounded-button text-center whitespace-nowrap hover:bg-primary/90 transition-colors">Book Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section min-h-screen flex items-center pt-20">
+        <div class="container mx-auto px-6">
+            <div class="w-full md:w-1/2 py-20">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-4">
+                    Professional Laundry Services at Your Doorstep
+                </h1>
+                <p class="text-lg md:text-xl text-gray-700 mb-8">
+                    Fresh, clean, and delivered on time. Experience premium laundry care with BubblePress.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contact" class="bg-primary text-white px-8 py-3 !rounded-button whitespace-nowrap hover:bg-primary/90 transition-colors text-center font-medium">
+                        Book Now
+                    </a>
+                    <a href="#services" class="border-2 border-primary text-primary px-8 py-3 !rounded-button whitespace-nowrap hover:bg-primary/5 transition-colors text-center font-medium">
+                        Our Services
+                    </a>
+                </div>
+                <div class="mt-12 flex items-center space-x-6">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center">
+                            <i class="ri-time-line text-white"></i>
+                        </div>
+                        <div>
+                            <p class="font-medium">Fast Turnaround</p>
+                            <p class="text-sm text-gray-600">24-48 hours</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <div class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center">
+                            <i class="ri-truck-line text-white"></i>
+                        </div>
+                        <div>
+                            <p class="font-medium">Free Delivery</p>
+                            <p class="text-sm text-gray-600">On orders over $30</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Premium Services</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    We offer a range of professional laundry services tailored to meet your specific needs.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition-all duration-300">
+                    <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mb-6">
+                        <i class="ri-t-shirt-line text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Wash & Fold</h3>
+                    <p class="text-gray-600 mb-4">
+                        Our standard wash and fold service includes sorting, washing, drying, and neatly folding your clothes.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-green-500 mt-1 mr-2"></i>
+                            <span>Gentle washing cycles</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-green-500 mt-1 mr-2"></i>
+                            <span>Premium detergents</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-green-500 mt-1 mr-2"></i>
+                            <span>Neatly folded and packaged</span>
+                        </li>
+                    </ul>
+                    <p class="font-medium text-gray-900">Starting at $2.50/lb</p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition-all duration-300">
+                    <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mb-6">
+                        <i class="ri-shirt-line text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Dry Cleaning</h3>
+                    <p class="text-gray-600 mb-4">
+                        Professional dry cleaning for your delicate garments, suits, dresses, and special fabrics.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-green-500 mt-1 mr-2"></i>
+                            <span>Eco-friendly solvents</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-green-500 mt-1 mr-2"></i>
+                            <span>Stain treatment</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-green-500 mt-1 mr-2"></i>
+                            <span>Pressed and hung</span>
+                        </li>
+                    </ul>
+                    <p class="font-medium text-gray-900">Starting at $6.99/item</p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition-all duration-300">
+                    <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mb-6">
+                        <i class="ri-timer-flash-line text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Express Service</h3>
+                    <p class="text-gray-600 mb-4">
+                        Need your laundry in a hurry? Our express service guarantees same-day turnaround.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-green-500 mt-1 mr-2"></i>
+                            <span>Same-day service</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-green-500 mt-1 mr-2"></i>
+                            <span>Priority processing</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-green-500 mt-1 mr-2"></i>
+                            <span>Expedited delivery</span>
+                        </li>
+                    </ul>
+                    <p class="font-medium text-gray-900">50% surcharge on regular rates</p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition-all duration-300">
+                    <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mb-6">
+                        <i class="ri-home-line text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Home Textiles</h3>
+                    <p class="text-gray-600 mb-4">
+                        Professional cleaning for your bedding, curtains, tablecloths, and other home textiles.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-green-500 mt-1 mr-2"></i>
+                            <span>Deep cleaning</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-green-500 mt-1 mr-2"></i>
+                            <span>Allergen removal</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-green-500 mt-1 mr-2"></i>
+                            <span>Fabric softening</span>
+                        </li>
+                    </ul>
+                    <p class="font-medium text-gray-900">Starting at $15.99/item</p>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition-all duration-300">
+                    <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mb-6">
+                        <i class="ri-shirt-fill text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Ironing & Pressing</h3>
+                    <p class="text-gray-600 mb-4">
+                        Professional ironing and pressing service to keep your clothes looking crisp and wrinkle-free.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-green-500 mt-1 mr-2"></i>
+                            <span>Hand ironing</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-green-500 mt-1 mr-2"></i>
+                            <span>Steam pressing</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-green-500 mt-1 mr-2"></i>
+                            <span>Hung or folded options</span>
+                        </li>
+                    </ul>
+                    <p class="font-medium text-gray-900">Starting at $3.50/item</p>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition-all duration-300">
+                    <div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mb-6">
+                        <i class="ri-user-star-line text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">VIP Subscription</h3>
+                    <p class="text-gray-600 mb-4">
+                        Regular laundry service with priority handling, free pickup and delivery, and special discounts.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-green-500 mt-1 mr-2"></i>
+                            <span>Weekly or bi-weekly service</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-green-500 mt-1 mr-2"></i>
+                            <span>15% discount on all services</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-green-500 mt-1 mr-2"></i>
+                            <span>Dedicated customer support</span>
+                        </li>
+                    </ul>
+                    <p class="font-medium text-gray-900">Starting at $99.99/month</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">How It Works</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Our simple 4-step process makes laundry day stress-free
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl font-bold text-primary">1</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Schedule Pickup</h3>
+                    <p class="text-gray-600">
+                        Book a pickup time that works for you through our website or app.
+                    </p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl font-bold text-primary">2</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">We Collect</h3>
+                    <p class="text-gray-600">
+                        Our driver will collect your laundry from your doorstep.
+                    </p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl font-bold text-primary">3</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">We Clean</h3>
+                    <p class="text-gray-600">
+                        Your clothes are professionally cleaned according to your preferences.
+                    </p>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-6">
+                        <span class="text-2xl font-bold text-primary">4</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">We Deliver</h3>
+                    <p class="text-gray-600">
+                        Clean, fresh laundry delivered back to you at your scheduled time.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <a href="#contact" class="bg-primary text-white px-8 py-3 !rounded-button whitespace-nowrap hover:bg-primary/90 transition-colors inline-block font-medium">
+                    Schedule Your First Pickup
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Choose the plan that works best for you. No hidden fees, no surprises.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Basic Plan -->
+                <div class="pricing-card bg-white p-8 rounded-lg shadow-md transition-all duration-300 border-t-4 border-gray-300">
+                    <h3 class="text-2xl font-semibold mb-2">Basic</h3>
+                    <p class="text-gray-600 mb-6">Perfect for individuals</p>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-gray-900">$2.50</span>
+                        <span class="text-gray-600">/lb</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-green-500 mt-1 mr-2"></i>
+                            <span>Wash & Fold service</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-green-500 mt-1 mr-2"></i>
+                            <span>48-hour turnaround</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-green-500 mt-1 mr-2"></i>
+                            <span>Standard detergent</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-green-500 mt-1 mr-2"></i>
+                            <span>Delivery ($5.99 fee)</span>
+                        </li>
+                        <li class="flex items-start text-gray-400">
+                            <i class="ri-close-line mt-1 mr-2"></i>
+                            <span>Stain treatment</span>
+                        </li>
+                        <li class="flex items-start text-gray-400">
+                            <i class="ri-close-line mt-1 mr-2"></i>
+                            <span>Priority processing</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="block w-full bg-gray-100 text-gray-800 text-center px-6 py-3 !rounded-button whitespace-nowrap hover:bg-gray-200 transition-colors font-medium">
+                        Choose Basic
+                    </a>
+                </div>
+                
+                <!-- Standard Plan -->
+                <div class="pricing-card bg-white p-8 rounded-lg shadow-md transition-all duration-300 border-t-4 border-primary relative transform scale-105">
+                    <div class="absolute top-0 right-0 bg-primary text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">
+                        POPULAR
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2">Standard</h3>
+                    <p class="text-gray-600 mb-6">Best for families</p>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-gray-900">$3.50</span>
+                        <span class="text-gray-600">/lb</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-green-500 mt-1 mr-2"></i>
+                            <span>Wash & Fold service</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-green-500 mt-1 mr-2"></i>
+                            <span>24-hour turnaround</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-green-500 mt-1 mr-2"></i>
+                            <span>Premium detergent options</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-green-500 mt-1 mr-2"></i>
+                            <span>Free delivery (orders $30+)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-green-500 mt-1 mr-2"></i>
+                            <span>Basic stain treatment</span>
+                        </li>
+                        <li class="flex items-start text-gray-400">
+                            <i class="ri-close-line mt-1 mr-2"></i>
+                            <span>Priority processing</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="block w-full bg-primary text-white text-center px-6 py-3 !rounded-button whitespace-nowrap hover:bg-primary/90 transition-colors font-medium">
+                        Choose Standard
+                    </a>
+                </div>
+                
+                <!-- Premium Plan -->
+                <div class="pricing-card bg-white p-8 rounded-lg shadow-md transition-all duration-300 border-t-4 border-secondary">
+                    <h3 class="text-2xl font-semibold mb-2">Premium</h3>
+                    <p class="text-gray-600 mb-6">For discerning customers</p>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-gray-900">$4.99</span>
+                        <span class="text-gray-600">/lb</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-green-500 mt-1 mr-2"></i>
+                            <span>Wash & Fold service</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-green-500 mt-1 mr-2"></i>
+                            <span>Same-day turnaround</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-green-500 mt-1 mr-2"></i>
+                            <span>Eco-friendly premium detergent</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-green-500 mt-1 mr-2"></i>
+                            <span>Free priority delivery</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-green-500 mt-1 mr-2"></i>
+                            <span>Advanced stain treatment</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-green-500 mt-1 mr-2"></i>
+                            <span>Priority processing</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="block w-full bg-secondary text-white text-center px-6 py-3 !rounded-button whitespace-nowrap hover:bg-secondary/90 transition-colors font-medium">
+                        Choose Premium
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mt-16 bg-white p-8 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-4">Additional Services</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead>
+                            <tr class="border-b">
+                                <th class="text-left py-3 px-4">Service</th>
+                                <th class="text-right py-3 px-4">Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b">
+                                <td class="py-3 px-4">Dry Cleaning (Shirts)</td>
+                                <td class="text-right py-3 px-4">$6.99/item</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-3 px-4">Dry Cleaning (Pants/Skirts)</td>
+                                <td class="text-right py-3 px-4">$8.99/item</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-3 px-4">Dry Cleaning (Suits)</td>
+                                <td class="text-right py-3 px-4">$19.99/item</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-3 px-4">Dry Cleaning (Dresses)</td>
+                                <td class="text-right py-3 px-4">$15.99/item</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-3 px-4">Ironing</td>
+                                <td class="text-right py-3 px-4">$3.50/item</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="py-3 px-4">Bedding (King/Queen)</td>
+                                <td class="text-right py-3 px-4">$24.99/set</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4">Curtains</td>
+                                <td class="text-right py-3 px-4">$15.99/panel</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What Our Customers Say</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Don't just take our word for it. Here's what our customers have to say about our services.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 p-8 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-primary">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">
+                        "BubblePress has completely changed my laundry routine. Their service is reliable, and my clothes always come back perfectly clean and neatly folded. The free delivery option is a game-changer!"
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 flex items-center justify-center mr-4">
+                            <i class="ri-user-line text-gray-600"></i>
+                        </div>
+                        <div>
+                            <p class="font-medium">Rebecca Thompson</p>
+                            <p class="text-sm text-gray-600">Marketing Executive</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 p-8 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-primary">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">
+                        "As a busy professional, I don't have time for laundry. BubblePress's Premium plan has been worth every penny. Same-day service and the stain treatment is exceptional. My white shirts have never looked better!"
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 flex items-center justify-center mr-4">
+                            <i class="ri-user-line text-gray-600"></i>
+                        </div>
+                        <div>
+                            <p class="font-medium">Michael Rodriguez</p>
+                            <p class="text-sm text-gray-600">Software Engineer</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 p-8 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-primary">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-half-fill"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">
+                        "Our family of five generates a lot of laundry. BubblePress has been a lifesaver! The Standard plan is perfect for us, and the quality is consistently excellent. The kids' stained sports uniforms come back looking brand new."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 flex items-center justify-center mr-4">
+                            <i class="ri-user-line text-gray-600"></i>
+                        </div>
+                        <div>
+                            <p class="font-medium">Jennifer Wilson</p>
+                            <p class="text-sm text-gray-600">School Teacher</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://readdy.ai/api/search-image?query=modern%20laundry%20facility%20with%20high-tech%20washing%20machines%2C%20clean%20and%20bright%20environment%2C%20staff%20carefully%20handling%20clothes%2C%20professional%20laundry%20equipment%2C%20organized%20workspace%2C%20high-quality%20commercial%20washing%20machines%20in%20a%20row%2C%20soft%20natural%20lighting&width=600&height=600&seq=2&orientation=squarish" alt="BubblePress Laundry Facility" class="rounded-lg shadow-lg w-full h-auto object-cover">
+                </div>
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">About BubblePress</h2>
+                    <p class="text-lg text-gray-700 mb-6">
+                        Founded in 2018, BubblePress has been revolutionizing the laundry industry with our commitment to quality, convenience, and customer satisfaction.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-6">
+                        Our state-of-the-art facility is equipped with the latest eco-friendly technology, allowing us to provide superior cleaning while minimizing our environmental impact. We use premium, biodegradable detergents that are gentle on your clothes and the planet.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-8">
+                        At BubblePress, we believe that everyone deserves to have clean, fresh laundry without the hassle. Our team of experienced professionals is dedicated to providing exceptional service that exceeds your expectations.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div>
+                            <div class="text-3xl font-bold text-primary mb-2">7,500+</div>
+                            <p class="text-gray-600">Happy Customers</p>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-primary mb-2">250,000+</div>
+                            <p class="text-gray-600">Loads Processed</p>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-primary mb-2">98%</div>
+                            <p class="text-gray-600">Satisfaction Rate</p>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-primary mb-2">5</div>
+                            <p class="text-gray-600">Years of Excellence</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Contact Us</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Have questions or ready to schedule your first pickup? Get in touch with us today.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-gray-700 mb-2">Full Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Your name" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 mb-2">Email Address</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Your email" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-gray-700 mb-2">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Your phone number" required>
+                        </div>
+                        <div>
+                            <label for="service" class="block text-gray-700 mb-2">Service Interested In</label>
+                            <div class="relative">
+                                <select id="service" name="service" class="w-full px-4 py-3 border border-gray-300 rounded appearance-none focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent pr-8">
+                                    <option value="">Select a service</option>
+                                    <option value="wash-fold">Wash & Fold</option>
+                                    <option value="dry-cleaning">Dry Cleaning</option>
+                                    <option value="express">Express Service</option>
+                                    <option value="home-textiles">Home Textiles</option>
+                                    <option value="ironing">Ironing & Pressing</option>
+                                    <option value="subscription">VIP Subscription</option>
+                                </select>
+                                <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                                    <i class="ri-arrow-down-s-line text-gray-400"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Tell us about your laundry needs"></textarea>
+                        </div>
+                        <button type="submit" class="bg-primary text-white px-8 py-3 !rounded-button whitespace-nowrap hover:bg-primary/90 transition-colors font-medium">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="space-y-8">
+                    <div class="bg-gray-50 p-8 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-4">Business Hours</h3>
+                        <ul class="space-y-3">
+                            <li class="flex justify-between">
+                                <span>Monday - Friday</span>
+                                <span>7:00 AM - 9:00 PM</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span>Saturday</span>
+                                <span>8:00 AM - 7:00 PM</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span>Sunday</span>
+                                <span>9:00 AM - 5:00 PM</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-8 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-4">Contact Information</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-4 mt-1">
+                                    <i class="ri-map-pin-line text-primary"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium">Address</p>
+                                    <p class="text-gray-600">123 Laundry Lane, Cleanville, CA 90210</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-4 mt-1">
+                                    <i class="ri-phone-line text-primary"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium">Phone</p>
+                                    <p class="text-gray-600">(555) 123-4567</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-4 mt-1">
+                                    <i class="ri-mail-line text-primary"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium">Email</p>
+                                    <p class="text-gray-600">info@bubblepress.com</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-8 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-4">Service Area</h3>
+                        <p class="text-gray-600 mb-4">
+                            We currently serve the following areas with free pickup and delivery:
+                        </p>
+                        <ul class="grid grid-cols-2 gap-2">
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-green-500 mr-2"></i>
+                                <span>Downtown</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-green-500 mr-2"></i>
+                                <span>Westside</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-green-500 mr-2"></i>
+                                <span>Northridge</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-green-500 mr-2"></i>
+                                <span>Eastlake</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-green-500 mr-2"></i>
+                                <span>Southbay</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="ri-check-line text-green-500 mr-2"></i>
+                                <span>Hillcrest</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div>
+                    <a href="#home" class="flex items-center space-x-2 mb-6">
+                        <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center">
+                            <div class="text-primary text-xl">
+                                <i class="ri-water-flash-line"></i>
+                            </div>
+                        </div>
+                        <span class="text-2xl font-['Pacifico'] text-white">BubblePress</span>
+                    </a>
+                    <p class="text-gray-400 mb-6">
+                        Professional laundry services that save you time and deliver exceptional quality.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="ri-facebook-fill text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="ri-instagram-line text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="ri-twitter-x-line text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="ri-linkedin-fill text-white"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="#pricing" class="text-gray-400 hover:text-white transition-colors">Pricing</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Wash & Fold</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Dry Cleaning</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Express Service</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Home Textiles</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Ironing & Pressing</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-6">We Accept</h3>
+                    <div class="grid grid-cols-3 gap-4">
+                        <div class="w-12 h-12 bg-white rounded flex items-center justify-center">
+                            <i class="ri-visa-fill text-2xl text-blue-700"></i>
+                        </div>
+                        <div class="w-12 h-12 bg-white rounded flex items-center justify-center">
+                            <i class="ri-mastercard-fill text-2xl text-red-500"></i>
+                        </div>
+                        <div class="w-12 h-12 bg-white rounded flex items-center justify-center">
+                            <i class="ri-paypal-fill text-2xl text-blue-600"></i>
+                        </div>
+                        <div class="w-12 h-12 bg-white rounded flex items-center justify-center">
+                            <i class="ri-apple-fill text-2xl text-gray-800"></i>
+                        </div>
+                        <div class="w-12 h-12 bg-white rounded flex items-center justify-center">
+                            <i class="ri-google-fill text-2xl text-red-500"></i>
+                        </div>
+                        <div class="w-12 h-12 bg-white rounded flex items-center justify-center">
+                            <i class="ri-amazon-fill text-2xl text-orange-500"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                        <form class="flex">
+                            <input type="email" placeholder="Your email" class="w-full px-4 py-2 border-none rounded-l focus:outline-none text-gray-900">
+                            <button type="submit" class="bg-primary text-white px-4 py-2 !rounded-r-button whitespace-nowrap hover:bg-primary/90 transition-colors">
+                                Subscribe
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                    &copy; 2025 BubblePress Laundry. All rights reserved.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 text-sm hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 text-sm hover:text-white transition-colors">Terms of Service</a>
+                    <a href="#" class="text-gray-400 text-sm hover:text-white transition-colors">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/15551234567" class="whatsapp-button fixed bottom-6 right-6 w-16 h-16 bg-green-500 rounded-full flex items-center justify-center shadow-lg z-50 hover:bg-green-600 transition-all">
+        <i class="ri-whatsapp-line text-white text-3xl"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script id="navigation-script">
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Close mobile menu when clicking a link
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Header scroll effect
+            const header = document.querySelector('header');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    header.classList.add('shadow-md');
+                    header.classList.remove('bg-opacity-95');
+                } else {
+                    header.classList.remove('shadow-md');
+                    header.classList.add('bg-opacity-95');
+                }
+            });
+        });
+    </script>
+
+    <script id="form-script">
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contact-form');
+            
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form values
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const phone = document.getElementById('phone').value;
+                const service = document.getElementById('service').value;
+                const message = document.getElementById('message').value;
+                
+                // Here you would typically send the data to a server
+                // For demo purposes, we'll just show an alert
+                alert(`Thank you, ${name}! Your message has been received. We'll contact you shortly about our ${service || 'laundry'} services.`);
+                
+                // Reset form
+                contactForm.reset();
+            });
+        });
+    </script>
+</body>
+</html>
